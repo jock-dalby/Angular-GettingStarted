@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+
+import { ProductService } from './products/product.service';
 
 @Component({
-  selector: 'pm-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector:'pm-root',
+    template: `
+    <div>
+        <h1>{{pageTitle}}</h1>
+        <pm-product-list></pm-product-list>
+    </div>
+    `,
+    providers: [ ProductService ]
 })
+
 export class AppComponent {
-  title = 'Angular: Getting Started';
+    pageTitle: string = 'Acme Product Management';
 }
