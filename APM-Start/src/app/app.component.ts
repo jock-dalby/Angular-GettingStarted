@@ -3,14 +3,22 @@ import { Component } from "@angular/core";
 import { ProductService } from './products/product.service';
 
 @Component({
-    selector:'pm-root',
+    selector: 'pm-root',
     template: `
     <div>
-        <h1>{{pageTitle}}</h1>
-        <pm-product-list></pm-product-list>
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <a class="navbar-brand">{{pageTitle}}</a>
+            <ul class="nav navbar-nav">
+            <li><a [routerLink]="['/welcome']">Home</a></li>
+            <li><a [routerLink]="['/products']">Product List</a></li>
+            </ul>
+        </div>
+        </nav>
     </div>
+    <router-outlet></router-outlet>
     `,
-    providers: [ ProductService ]
+    providers: [ProductService]
 })
 
 export class AppComponent {

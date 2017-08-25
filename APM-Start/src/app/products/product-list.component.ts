@@ -4,7 +4,7 @@ import { ProductService } from './product.service';
 
 @Component({
     moduleId: module.id,
-    selector: 'pm-product-list',
+    // selector: 'pm-product-list',
     templateUrl: './product-list.component.html',
     styleUrls: ['./product-list.component.css'],
     providers: [ProductService]
