@@ -38,7 +38,9 @@
                                 [style.width.px]='imageWidth'
                                 [style.margin.px]='imageMargin'>
                         </td>
-                        <td>{{p.productName}}</td>
+                        <td><a [routerLink]="['/products', p.productId]">
+                            {{p.productName}}
+                        </a></td>
                         <td>{{p.productCode | lowercase | convertToSpaces: '-'}}</td>
                         <td>{{p.releaseDate}}</td>
                         <td>{{p.price | currency:'NZD':true:'1.2-2'}}</td>
